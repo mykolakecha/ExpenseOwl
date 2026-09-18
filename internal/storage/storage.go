@@ -235,16 +235,16 @@ func (e *RecurringExpense) Validate() error {
 
 // variables
 var defaultCategories = []string{
-	"Food",
-	"Groceries",
-	"Travel",
-	"Rent",
-	"Utilities",
-	"Entertainment",
-	"Healthcare",
-	"Shopping",
-	"Miscellaneous",
-	"Income",
+	"Кафе та ресторани",
+	"Продукти",
+	"Подорожі",
+	"Оренда",
+	"Комунальні послуги",
+	"Розваги",
+	"Здоров’я",
+	"Покупки",
+	"Інше",
+	"Дохід",
 }
 
 var SupportedCurrencies = []string{

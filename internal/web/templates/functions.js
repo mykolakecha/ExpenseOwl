@@ -34,7 +34,7 @@ const currencyBehaviors = {
     vnd: {symbol: "₫", useComma: true, useDecimals: false, useSpace: true, right: true},
     myr: {symbol: "RM", useComma: false, useDecimals: true, useSpace: false, right: false},
     mad: {symbol: "DH", useComma: false, useDecimals: true, useSpace: true, right: true},
-    uah: {symbol: "₴", useComma: true, useDecimals: true, useSpace: true, right: true},
+    uah: {symbol: "₴", useComma: true, useDecimals: true, useSpace: true, right: true, locale: "uk-UA"},
 };
 
 function formatCurrency(amount) {
@@ -51,7 +51,7 @@ function formatCurrency(amount) {
         minimumFractionDigits: behavior.useDecimals ? 2 : 0,
         maximumFractionDigits: behavior.useDecimals ? 2 : 0,
     };
-    let formattedAmount = new Intl.NumberFormat(behavior.useComma ? "de-DE" : "en-US",options).format(absAmount);
+    let formattedAmount = new Intl.NumberFormat(behavior.locale || (behavior.useComma ? "de-DE" : "en-US"), options).format(absAmount);
     let result = behavior.right
         ? `${formattedAmount}${behavior.useSpace ? " " : ""}${behavior.symbol}`
         : `${behavior.symbol}${behavior.useSpace ? " " : ""}${formattedAmount}`;
@@ -63,11 +63,11 @@ function getUserTimeZone() {
 }
 
 function formatMonth(date) {
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('uk-UA', {
         year: 'numeric',
         month: 'long',
         timeZone: getUserTimeZone()
-    });
+    }).replace(' р.', '');
 }
 
 function getISODateWithLocalTime(dateInput) {
@@ -82,14 +82,14 @@ function getISODateWithLocalTime(dateInput) {
 
 function formatDateFromUTC(utcDateString) {
     const date = new Date(utcDateString);
-    return date.toLocaleDateString('en-US', {
+    return date.toLocaleDateString('uk-UA', {
         month: 'short',
         day: 'numeric',
         year: 'numeric',
         hour: '2-digit',
         minute: '2-digit',
         timeZoneName: 'short'
-    });
+    }).replace(' р.', '');
 }
 
 function updateMonthDisplay() {

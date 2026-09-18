@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,65 +15,65 @@
             }
         })();
     </script>
-    <title>ExpenseOwl Settings</title>
+    <title>ExpenseOwl — Налаштування</title>
 </head>
 <body>
     <div class="container">
         <header>
             <div class="nav-bar">
                 <a href="/">
-                    <img src="/pwa/icon-192.png" alt="ExpenseOwl Logo" height="85" style="vertical-align: middle; margin-right: 20px;">
+                    <img src="/pwa/icon-192.png" alt="Логотип ExpenseOwl" height="85" style="vertical-align: middle; margin-right: 20px;">
                 </a>
-                <a href="/" class="view-button" data-tooltip="Dashboard">
+                <a href="/" class="view-button" data-tooltip="Панель">
                     <i class="fa-solid fa-chart-pie"></i>
                 </a>
-                <a href="/table" class="view-button" data-tooltip="Table View">
+                <a href="/table" class="view-button" data-tooltip="Таблиця">
                     <i class="fa-solid fa-table"></i>
                 </a>
-                <a href="/settings" class="view-button active" data-tooltip="Settings">
+                <a href="/settings" class="view-button active" data-tooltip="Налаштування">
                     <i class="fa-solid fa-gear"></i>
                 </a>
             </div>
         </header>
 
         <div class="info-field">
-            Version: <a href="https://github.com/tanq16/expenseowl/releases/latest" target="_blank" rel="noopener noreferrer">v4.0</a>
+            Версія: <a href="https://github.com/tanq16/expenseowl/releases/latest" target="_blank" rel="noopener noreferrer">v4.0</a>
             <span class="separator">|</span>
-            <a href="https://github.com/tanq16/expenseowl/blob/main/README.md" target="_blank" rel="noopener noreferrer">Documentation</a>
+            <a href="https://github.com/tanq16/expenseowl/blob/main/README.md" target="_blank" rel="noopener noreferrer">Документація</a>
             <span class="separator">|</span>
             <a href="https://github.com/tanq16/expenseowl" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
 
         <div class="form-container">
-            <h2 align="center">Category Settings</h2>
+            <h2 align="center">Категорії</h2>
             <div id="categories-manager">
                 <div id="categories-list" class="categories-list">
                 </div>
                 <div class="category-input-container">
-                    <input type="text" id="newCategory" placeholder="Add new category">
-                    <button id="addCategory" class="nav-button">Add</button>
+                    <input type="text" id="newCategory" placeholder="Нова категорія">
+                    <button id="addCategory" class="nav-button">Додати</button>
                 </div>
-                <button id="saveCategories" class="nav-button">Save Categories</button>
+                <button id="saveCategories" class="nav-button">Зберегти категорії</button>
                 <div id="categoriesMessage" class="form-message"></div>
             </div>
         </div>
 
         <div class="settings-container">
             <div class="form-container half-width">
-                <h2 align="center">Currency Settings</h2>
+                <h2 align="center">Валюта</h2>
                 <div class="currency-selector">
                     <select id="currencySelect">
                     </select>
-                    <button id="saveCurrency" class="nav-button">Save</button>
+                    <button id="saveCurrency" class="nav-button">Зберегти</button>
                 </div>
                 <div id="currencyMessage" class="form-message"></div>
             </div>
             
             <div class="form-container half-width">
-                <h2 align="center">Start Date Settings</h2>
+                <h2 align="center">Початок місяця</h2>
                 <div class="start-date-manager">
                     <input type="number" id="startDate" min="1" max="31" placeholder="1">
-                    <button id="saveStartDate" class="nav-button">Save</button>
+                    <button id="saveStartDate" class="nav-button">Зберегти</button>
                 </div>
                 <div id="startDateMessage" class="form-message"></div>
             </div>
@@ -81,76 +81,76 @@
 
         <div class="settings-container">
             <div class="form-container half-width">
-                <h2 align="center">Theme Settings</h2>
+                <h2 align="center">Тема</h2>
                 <div class="theme-selector">
                     <select id="themeSelect">
-                        <option value="system">System Default</option>
-                        <option value="light">Light</option>
-                        <option value="dark">Dark</option>
+                        <option value="system">Як у системі</option>
+                        <option value="light">Світла</option>
+                        <option value="dark">Темна</option>
                     </select>
                 </div>
                 <div id="themeMessage" class="form-message"></div>
             </div>
             <div class="form-container half-width">
-                <h2 align="center">Import/Export Data</h2>
+                <h2 align="center">Імпорт / експорт даних</h2>
                 <div class="export-buttons">
                     <div class="export-options">
-                        <a href="/export/csv" id="csv-export-file" class="nav-button" download="expenses.csv">Export to CSV</a>
+                        <a href="/export/csv" id="csv-export-file" class="nav-button" download="expenses.csv">Експорт у CSV</a>
                     </div>
                     <div class="import-option">
-                        <label for="csv-import-file" class="nav-button">Import from CSV</label>
+                        <label for="csv-import-file" class="nav-button">Імпорт із CSV</label>
                         <input type="file" id="csv-import-file" accept=".csv" style="display: none;">
                     </div>
                     <div class="import-option">
-                        <label for="csv-import-file-old" class="nav-button">Import from ExpenseOwl v3.20-</label>
+                        <label for="csv-import-file-old" class="nav-button">Імпорт з ExpenseOwl v3.20-</label>
                         <input type="file" id="csv-import-file-old" accept=".csv" style="display: none;">
                     </div>
                 </div>
                 <div id="importMessage" class="form-message"></div>
                 <div id="importSummary" class="import-summary" style="display: none;">
-                    <h3>Import Summary</h3>
-                    <p>Total Processed: <span id="summary-processed"></span></p>
-                    <p>Imported: <span id="summary-imported"></span></p>
-                    <p>Skipped: <span id="summary-skipped"></span></p>
-                    <p>New Categories: <span id="summary-new-categories"></span></p>
+                    <h3>Підсумок імпорту</h3>
+                    <p>Оброблено: <span id="summary-processed"></span></p>
+                    <p>Імпортовано: <span id="summary-imported"></span></p>
+                    <p>Пропущено: <span id="summary-skipped"></span></p>
+                    <p>Нові категорії: <span id="summary-new-categories"></span></p>
                 </div>
             </div>
         </div>
         
         <div class="form-container">
-            <h2 align="center">Recurring Transactions</h2>
+            <h2 align="center">Регулярні транзакції</h2>
             <form id="recurringExpenseForm" class="expense-form recurring-expense-form">
                 <div class="form-group">
-                    <label for="recurringName">Name</label>
+                    <label for="recurringName">Назва</label>
                     <input type="text" id="recurringName" required>
                 </div>
                 <div class="form-group">
-                    <label for="recurringAmount">Amount</label>
+                    <label for="recurringAmount">Сума</label>
                     <input type="number" id="recurringAmount" step="0.01" min="0.01" max="9000000000000000" required>
                 </div>
                 <div class="form-group">
-                    <label for="recurringCategory">Category</label>
+                    <label for="recurringCategory">Категорія</label>
                     <select id="recurringCategory" required></select>
                 </div>
                 <div class="form-group">
-                    <label for="tags-input">Tags</label>
+                    <label for="tags-input">Теги</label>
                     <div class="tags-input-container">
                         <div id="selected-tags" class="selected-tags"></div>
-                        <input type="text" id="tags-input" placeholder="(optional)">
+                        <input type="text" id="tags-input" placeholder="(необов’язково)">
                     </div>
                     <div id="tags-dropdown" class="tags-dropdown"></div>
                 </div>
                 <div class="form-group">
-                    <label for="recurringInterval">Interval</label>
+                    <label for="recurringInterval">Періодичність</label>
                     <select id="recurringInterval" required>
-                        <option value="daily">Daily</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
+                        <option value="daily">Щодня</option>
+                        <option value="weekly">Щотижня</option>
+                        <option value="monthly">Щомісяця</option>
+                        <option value="yearly">Щороку</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="recurringStartDate">Start Date</label>
+                    <label for="recurringStartDate">Дата початку</label>
                     <input type="date" id="recurringStartDate" required>
                     <script>
                         const today = new Date();
@@ -162,17 +162,17 @@
                     </script>
                 </div>
                 <div class="form-group">
-                    <label for="recurringOccurrences">Occurrences</label>
+                    <label for="recurringOccurrences">Кількість повторень</label>
                     <input type="number" id="recurringOccurrences" min="2" value="2" required>
                 </div>
                 <div class="form-group form-group-checkbox">
-                    <label for="recurringReportGain">Report Gain</label>
+                    <label for="recurringReportGain">Це дохід</label>
                     <input type="checkbox" id="recurringReportGain" class="styled-checkbox">
                 </div>
-                <button type="submit" class="nav-button">Add Recurring Transaction</button>
+                <button type="submit" class="nav-button">Додати регулярну транзакцію</button>
             </form>
             <div id="recurringExpenseMessage" class="form-message"></div>
-            <h3 align="center" style="margin-top: 2rem;">Existing Recurring Transactions</h3>
+            <h3 align="center" style="margin-top: 2rem;">Наявні регулярні транзакції</h3>
             <div id="recurring-expenses-list">
             </div>
         </div>
@@ -180,66 +180,66 @@
 
     <div id="deleteRecurringModal" class="modal">
         <div class="modal-content">
-            <h3>Delete Recurring Expense</h3>
-            <p>Do you want to delete all instances of this expense, or only future ones?</p>
+            <h3>Видалити регулярну транзакцію</h3>
+            <p>Видалити всі записи цієї транзакції чи лише майбутні?</p>
             <div class="modal-buttons">
-                <button class="modal-button" onclick="closeRecurringDeleteModal()">Cancel</button>
-                <button class="modal-button" onclick="confirmRecurringDelete(false)">Delete Future</button>
-                <button class="modal-button confirm" onclick="confirmRecurringDelete(true)">Delete All</button>
+                <button class="modal-button" onclick="closeRecurringDeleteModal()">Скасувати</button>
+                <button class="modal-button" onclick="confirmRecurringDelete(false)">Лише майбутні</button>
+                <button class="modal-button confirm" onclick="confirmRecurringDelete(true)">Усі</button>
             </div>
         </div>
     </div>
 
     <div id="editRecurringModal" class="modal">
         <div class="modal-content">
-            <h3>Edit Recurring Expense</h3>
+            <h3>Редагувати регулярну транзакцію</h3>
             <form id="editRecurringExpenseForm" class="expense-form recurring-expense-form">
                  <div class="form-group">
-                    <label for="editRecurringName">Name</label>
+                    <label for="editRecurringName">Назва</label>
                     <input type="text" id="editRecurringName" required>
                 </div>
                 <div class="form-group">
-                    <label for="editRecurringAmount">Amount</label>
+                    <label for="editRecurringAmount">Сума</label>
                     <input type="number" id="editRecurringAmount" step="0.01" min="0" required>
                 </div>
                 <div class="form-group">
-                    <label for="editRecurringCategory">Category</label>
+                    <label for="editRecurringCategory">Категорія</label>
                     <select id="editRecurringCategory" required></select>
                 </div>
                 <div class="form-group">
-                    <label for="edit-tags-input">Tags</label>
+                    <label for="edit-tags-input">Теги</label>
                     <div class="tags-input-container">
                         <div id="edit-selected-tags" class="selected-tags"></div>
-                        <input type="text" id="edit-tags-input" placeholder="(optional)">
+                        <input type="text" id="edit-tags-input" placeholder="(необов’язково)">
                     </div>
                     <div id="edit-tags-dropdown" class="tags-dropdown"></div>
                 </div>
                 <div class="form-group">
-                    <label for="editRecurringInterval">Interval</label>
+                    <label for="editRecurringInterval">Періодичність</label>
                     <select id="editRecurringInterval" required>
-                        <option value="daily">Daily</option>
-                        <option value="weekly">Weekly</option>
-                        <option value="monthly">Monthly</option>
-                        <option value="yearly">Yearly</option>
+                        <option value="daily">Щодня</option>
+                        <option value="weekly">Щотижня</option>
+                        <option value="monthly">Щомісяця</option>
+                        <option value="yearly">Щороку</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="editRecurringStartDate">Start Date</label>
+                    <label for="editRecurringStartDate">Дата початку</label>
                     <input type="date" id="editRecurringStartDate" required>
                 </div>
                 <div class="form-group">
-                    <label for="editRecurringOccurrences">Occurrences (0 for indefinite)</label>
+                    <label for="editRecurringOccurrences">Кількість повторень (0 — без обмежень)</label>
                     <input type="number" id="editRecurringOccurrences" min="0" value="0" required>
                 </div>
                 <div class="form-group form-group-checkbox">
-                    <label for="editRecurringReportGain">Report Gain</label>
+                    <label for="editRecurringReportGain">Це дохід</label>
                     <input type="checkbox" id="editRecurringReportGain" class="styled-checkbox">
                 </div>
             </form>
             <div class="modal-buttons">
-                <button class="modal-button" onclick="closeRecurringEditModal()">Cancel</button>
-                <button class="modal-button" onclick="confirmRecurringUpdate(false)">Update Future</button>
-                <button class="modal-button confirm" onclick="confirmRecurringUpdate(true)">Update All</button>
+                <button class="modal-button" onclick="closeRecurringEditModal()">Скасувати</button>
+                <button class="modal-button" onclick="confirmRecurringUpdate(false)">Лише майбутні</button>
+                <button class="modal-button confirm" onclick="confirmRecurringUpdate(true)">Усі</button>
             </div>
         </div>
     </div>
@@ -256,6 +256,7 @@
         let recurringExpenses = [];
         let recurringExpenseToDelete = null;
         let recurringExpenseToEdit = null;
+        const intervalLabels = { daily: 'Щодня', weekly: 'Щотижня', monthly: 'Щомісяця', yearly: 'Щороку' };
 
         function showMessage(elementId, message, isSuccess) {
             const messageDiv = document.getElementById(elementId);
@@ -358,9 +359,9 @@
                 renderCategories();
                 input.value = '';
             } else if (categories.includes(category)) {
-                showMessage('categoriesMessage', 'Category already exists', false);
+                showMessage('categoriesMessage', 'Така категорія вже існує', false);
             } else if (!category) {
-                showMessage('categoriesMessage', 'Category name cannot be empty.', false);
+                showMessage('categoriesMessage', 'Назва категорії не може бути порожньою.', false);
             }
         }
 
@@ -371,7 +372,7 @@
 
         async function saveCategories() {
             if (categories.length === 0) {
-                showMessage('categoriesMessage', 'At least one category is required', false);
+                showMessage('categoriesMessage', 'Потрібна щонайменше одна категорія', false);
                 return;
             }
             try {
@@ -381,14 +382,14 @@
                     body: JSON.stringify(categories)
                 });   
                 if (response.ok) {
-                    showMessage('categoriesMessage', 'Categories saved successfully', true);
+                    showMessage('categoriesMessage', 'Категорії збережено', true);
                 } else {
                     const error = await response.json();
-                    showMessage('categoriesMessage', `Failed to save categories: ${error.error}`, false);
+                    showMessage('categoriesMessage', `Не вдалося зберегти категорії: ${error.error}`, false);
                 }
             } catch (error) {
                 console.error('Error saving categories:', error);
-                showMessage('categoriesMessage', 'Error saving categories', false);
+                showMessage('categoriesMessage', 'Помилка збереження категорій', false);
             }
         }
         
@@ -449,7 +450,7 @@
 
                 if (value && ![...allTags].map(t => t.toLowerCase()).includes(value)) {
                     const newItem = document.createElement('div');
-                    newItem.textContent = `+ Create "${input.value.trim()}"`;
+                    newItem.textContent = `+ Створити «${input.value.trim()}»`;
                     newItem.className = 'new-tag';
                     newItem.onclick = () => addTag(input.value.trim());
                     dropdown.appendChild(newItem);
@@ -499,14 +500,14 @@
                     body: JSON.stringify(currencyCode)
                 });
                 if (response.ok) {
-                    showMessage('currencyMessage', 'Currency saved successfully', true);
+                    showMessage('currencyMessage', 'Валюту збережено', true);
                     currentCurrency = currencyCode;
                 } else {
-                    showMessage('currencyMessage', 'Failed to save currency', false);
+                    showMessage('currencyMessage', 'Не вдалося зберегти валюту', false);
                 }
             } catch (error) {
                 console.error('Error saving currency:', error);
-                showMessage('currencyMessage', 'Error saving currency', false);
+                showMessage('currencyMessage', 'Помилка збереження валюти', false);
             }
         }
 
@@ -522,10 +523,10 @@
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(parseInt(startDateValue, 10))
                 });
-                showMessage('startDateMessage', response.ok ? 'Start date saved successfully' : 'Failed to save start date', response.ok);
+                showMessage('startDateMessage', response.ok ? 'Початок місяця збережено' : 'Не вдалося зберегти початок місяця', response.ok);
             } catch (error) {
                 console.error('Error saving start date:', error);
-                showMessage('startDateMessage', 'Error saving start date', false);
+                showMessage('startDateMessage', 'Помилка збереження початку місяця', false);
             }
         }
         
@@ -537,19 +538,19 @@
                 renderRecurringExpenses(recurringExpenses);
             } catch (error) {
                 console.error('Error fetching recurring expenses:', error);
-                document.getElementById('recurring-expenses-list').innerHTML = '<p>Error loading recurring expenses.</p>';
+                document.getElementById('recurring-expenses-list').innerHTML = '<p>Не вдалося завантажити регулярні транзакції.</p>';
             }
         }
 
         function findNextOccurrence(r) {
             let nextDate = new Date(r.startDate);
             const today = new Date();
-            if (nextDate >= today) return nextDate.toLocaleDateString();
+            if (nextDate >= today) return nextDate.toLocaleDateString('uk-UA');
             if (r.occurrences > 0) {
                 let occurrencesCount = 0;
                 while (nextDate < today) {
                     occurrencesCount++;
-                    if (occurrencesCount >= r.occurrences) return 'Finished';
+                    if (occurrencesCount >= r.occurrences) return 'Завершено';
                     switch(r.interval) {
                         case 'daily': nextDate.setDate(nextDate.getDate() + 1); break;
                         case 'weekly': nextDate.setDate(nextDate.getDate() + 7); break;
@@ -557,7 +558,7 @@
                         case 'yearly': nextDate.setFullYear(nextDate.getFullYear() + 1); break;
                     }
                 }
-                return nextDate.toLocaleDateString();
+                return nextDate.toLocaleDateString('uk-UA');
             } else { // Indefinite
                  while (nextDate < today) {
                     switch(r.interval) {
@@ -567,26 +568,26 @@
                         case 'yearly': nextDate.setFullYear(nextDate.getFullYear() + 1); break;
                     }
                 }
-                return nextDate.toLocaleDateString();
+                return nextDate.toLocaleDateString('uk-UA');
             }
         }
 
         function renderRecurringExpenses(recurring) {
             const list = document.getElementById('recurring-expenses-list');
             if (!recurring || recurring.length === 0) {
-                list.innerHTML = '<p>No recurring expenses found.</p>';
+                list.innerHTML = '<p>Регулярних транзакцій немає.</p>';
                 return;
             }
             list.innerHTML = `
                 <table class="expense-table">
-                    <thead><tr><th>Name</th><th>Amount</th><th>Category</th><th>Interval</th><th>Next Occurrence</th><th></th></tr></thead>
+                    <thead><tr><th>Назва</th><th>Сума</th><th>Категорія</th><th>Періодичність</th><th>Наступна дата</th><th></th></tr></thead>
                     <tbody>
                         ${recurring.map(r => `
                             <tr>
                                 <td>${r.name}</td>
                                 <td>${formatCurrency(r.amount)}</td>
                                 <td>${r.category}</td>
-                                <td>${r.interval.charAt(0).toUpperCase() + r.interval.slice(1)}</td>
+                                <td>${intervalLabels[r.interval] || r.interval}</td>
                                 <td>${findNextOccurrence(r)}</td>
                                 <td>
                                     <button class="edit-button" onclick="showRecurringEditModal('${r.id}')"><i class="fa-solid fa-pen-to-square"></i></button>
@@ -613,11 +614,11 @@
             try {
                 const response = await fetch(`/recurring-expense/delete?id=${recurringExpenseToDelete}&removeAll=${removeAll}`, { method: 'DELETE' });
                 if (!response.ok) throw new Error('Failed to delete recurring expense');
-                showMessage('recurringExpenseMessage', 'Recurring expense deleted successfully', true);
+                showMessage('recurringExpenseMessage', 'Регулярну транзакцію видалено', true);
                 fetchAndRenderRecurringExpenses();
             } catch (error) {
                 console.error('Error deleting recurring expense:', error);
-                showMessage('recurringExpenseMessage', 'Failed to delete recurring expense', false);
+                showMessage('recurringExpenseMessage', 'Не вдалося видалити регулярну транзакцію', false);
             } finally {
                 closeRecurringDeleteModal();
             }
@@ -668,11 +669,11 @@
                     body: JSON.stringify(updatedData)
                 });
                 if (!response.ok) throw new Error('Failed to update recurring expense');
-                showMessage('recurringExpenseMessage', 'Recurring expense updated successfully', true);
+                showMessage('recurringExpenseMessage', 'Регулярну транзакцію оновлено', true);
                 fetchAndRenderRecurringExpenses();
             } catch(error) {
                 console.error('Error updating recurring expense:', error);
-                showMessage('recurringExpenseMessage', 'Failed to update recurring expense', false);
+                showMessage('recurringExpenseMessage', 'Не вдалося оновити регулярну транзакцію', false);
             } finally {
                 closeRecurringEditModal();
             }
@@ -687,7 +688,7 @@
             const messageDiv = document.getElementById('importMessage');
             const summaryDiv = document.getElementById('importSummary');
 
-            messageDiv.textContent = 'Importing... this may take a while for large files.';
+            messageDiv.textContent = 'Імпортування… для великих файлів це може зайняти час.';
             messageDiv.className = 'form-message';
             summaryDiv.style.display = 'none';
 
@@ -700,22 +701,22 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                    messageDiv.textContent = 'Import completed!';
+                    messageDiv.textContent = 'Імпорт завершено!';
                     messageDiv.className = 'form-message success';
                     summaryDiv.style.display = 'block';
                     document.getElementById('summary-processed').textContent = result.total_processed;
                     document.getElementById('summary-imported').textContent = result.imported;
                     document.getElementById('summary-skipped').textContent = result.skipped;
-                    document.getElementById('summary-new-categories').textContent = (result.new_categories || []).join(', ') || 'None';
+                    document.getElementById('summary-new-categories').textContent = (result.new_categories || []).join(', ') || 'Немає';
                     
                     await initialize();
                 } else {
-                    messageDiv.textContent = `Error: ${result.error || 'Failed to import CSV'}`;
+                    messageDiv.textContent = `Помилка: ${result.error || 'не вдалося імпортувати CSV'}`;
                     messageDiv.className = 'form-message error';
                 }
             } catch (error) {
                 console.error('Error importing CSV:', error);
-                messageDiv.textContent = 'Error: An unexpected error occurred during import.';
+                messageDiv.textContent = 'Помилка: під час імпорту сталася непередбачена помилка.';
                 messageDiv.className = 'form-message error';
             } finally {
                 event.target.value = '';
@@ -731,7 +732,7 @@
             const messageDiv = document.getElementById('importMessage');
             const summaryDiv = document.getElementById('importSummary');
 
-            messageDiv.textContent = 'Importing... this may take a while for large files.';
+            messageDiv.textContent = 'Імпортування… для великих файлів це може зайняти час.';
             messageDiv.className = 'form-message';
             summaryDiv.style.display = 'none';
 
@@ -744,22 +745,22 @@
                 const result = await response.json();
 
                 if (response.ok) {
-                    messageDiv.textContent = 'Import completed!';
+                    messageDiv.textContent = 'Імпорт завершено!';
                     messageDiv.className = 'form-message success';
                     summaryDiv.style.display = 'block';
                     document.getElementById('summary-processed').textContent = result.total_processed;
                     document.getElementById('summary-imported').textContent = result.imported;
                     document.getElementById('summary-skipped').textContent = result.skipped;
-                    document.getElementById('summary-new-categories').textContent = (result.new_categories || []).join(', ') || 'None';
+                    document.getElementById('summary-new-categories').textContent = (result.new_categories || []).join(', ') || 'Немає';
                     
                     await initialize();
                 } else {
-                    messageDiv.textContent = `Error: ${result.error || 'Failed to import CSV'}`;
+                    messageDiv.textContent = `Помилка: ${result.error || 'не вдалося імпортувати CSV'}`;
                     messageDiv.className = 'form-message error';
                 }
             } catch (error) {
                 console.error('Error importing CSV:', error);
-                messageDiv.textContent = 'Error: An unexpected error occurred during import.';
+                messageDiv.textContent = 'Помилка: під час імпорту сталася непередбачена помилка.';
                 messageDiv.className = 'form-message error';
             } finally {
                 event.target.value = '';
@@ -804,7 +805,7 @@
 
             } catch (error) {
                 console.error('Failed to initialize settings:', error);
-                showMessage('categoriesMessage', 'Failed to load settings', false);
+                showMessage('categoriesMessage', 'Не вдалося завантажити налаштування', false);
             }
         }
         
@@ -825,7 +826,7 @@
             const selectedTheme = e.target.value;
             localStorage.setItem('theme', selectedTheme);
             applyTheme(selectedTheme);
-            showMessage('themeMessage', 'Theme updated successfully.', true);
+            showMessage('themeMessage', 'Тему оновлено.', true);
         });
 
         // --- Event Listeners ---
@@ -860,18 +861,18 @@
                     body: JSON.stringify(formData)
                 });
                 if (response.ok) {
-                    showMessage('recurringExpenseMessage', 'Recurring expense added successfully!', true);
+                    showMessage('recurringExpenseMessage', 'Регулярну транзакцію додано!', true);
                     document.getElementById('recurringExpenseForm').reset();
                     document.getElementById('selected-tags').innerHTML = '';
                     addFormSelectedTags.clear();
                     fetchAndRenderRecurringExpenses();
                 } else {
                     const error = await response.json();
-                    showMessage('recurringExpenseMessage', `Error: ${error.error || 'Failed to add recurring expense'}`, false);
+                    showMessage('recurringExpenseMessage', `Помилка: ${error.error || 'не вдалося додати регулярну транзакцію'}`, false);
                 }
             } catch (error) {
                 console.error('Error adding recurring expense:', error);
-                showMessage('recurringExpenseMessage', 'Error: Failed to add recurring expense', false);
+                showMessage('recurringExpenseMessage', 'Помилка: не вдалося додати регулярну транзакцію', false);
             }
         });
 
